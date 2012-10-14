@@ -14,13 +14,13 @@
 (function($) {
 
     $().ready(function() {
-        $('.formControls input #resetrelations').click(function (event) {
+        $('.formControls input#resetrelations').click(function (event) {
           event.preventDefault();
           $.get('@@migration-view-after', function(data) {
             $('.results').html(data)
           });
         });
-        $('.formControls input #move').click(function (event) {
+        $('.formControls input#move').click(function (event) {
           event.preventDefault();
           $.get('@@relocateContentByLanguage', function(data) {
             $('.results').html(data)
